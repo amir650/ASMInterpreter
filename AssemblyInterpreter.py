@@ -29,16 +29,13 @@ class AssemblyInterpreter:
 
     def _increment(self, x):
         self.registers[x] += 1
-        pass
 
     def _decrement(self, x):
         self.registers[x] -= 1
-        pass
 
     def _jump_not_zero(self, x, y):
         if(self.resolve(x) != 0):
             self.program_counter += self.resolve(y) - 1
-        pass
 
 def simple_assembler(program):
 	return AssemblyInterpreter().execute(program)
